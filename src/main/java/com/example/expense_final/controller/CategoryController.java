@@ -2,6 +2,7 @@ package com.example.expense_final.controller;
 
 import com.example.expense_final.model.Category;
 import com.example.expense_final.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 public class CategoryController {
+
     private CategoryRepository categoryRepository; //create a private connection to our category repository
 
     public CategoryController(CategoryRepository categoryRepository)
@@ -61,7 +63,7 @@ public class CategoryController {
          */
     }
 
-    @DeleteMapping("/category/{id}") //deltes id number 4
+    @DeleteMapping("/category/{id}") //deletes id number 4
     ResponseEntity<?> deleteCategory(@PathVariable Long id)
     {
         categoryRepository.deleteById(id);

@@ -1,27 +1,28 @@
 package com.example.expense_final.model;
-import javax.persistence.*;
+import java.util.Set;
 
-import lombok.AllArgsConstructor;
-import lombok.Data; //creates the setters and getters
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import java.util.Set;
-
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
 @Data
-
-@Table(name = "category")
-public class Category{
-
+@Table(name="category")
+public class Category {
     @Id
-    private Long Id;
+    private Long id;
 
-    @NonNull //valides making sure you must provide a name
-    private String name; //category name something like Travel, Grocery
+    @NonNull
+    private String name;
 
-    /*@ManyToOne(cascade= CascadeType.PERSIST)//when u add the category you need to add the user so it affects both tables
-    private User user; //many categories connected to one user. */
+
+
 }

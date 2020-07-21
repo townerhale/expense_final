@@ -22,7 +22,9 @@ public class Expense {
 
     private String descript;
 
-    //format: Id, date, description, user id, Category id.
+    //format: Id, date, description, user id, location Category id.
+
+    private String location;
 
     @ManyToOne
     private Category category; //many of these expenses goes under one caegory

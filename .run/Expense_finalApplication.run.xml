@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Expense_finalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="expense_final" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.expense_final.Expense_finalApplication" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/main/java" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
